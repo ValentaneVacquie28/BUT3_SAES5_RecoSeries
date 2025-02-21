@@ -1,0 +1,10 @@
+Flask
+python-dotenv
+scikit-learn
+numpy
+nltk
+regex
+chardet
+ftfy
+wordninja
+requests

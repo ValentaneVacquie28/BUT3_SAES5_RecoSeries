@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RecoSeries</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+        <script src="{{ url_for('static', filename='index.js') }}"></script> <!-- Inclusion du fichier JS externe -->
+        <script src="https://use.fontawesome.com/fe459689b4.js"></script><!--Bibliothèque qui gère les boutons d'évaluation des séries-->
+    </head>
+    <body>
+        <nav>
+            <div class="recommandation_index"><a href="{{ url_for('recommandationSeries') }}" class="bouton_menu">Mes recommandations</a></div>
+            <div class="series"><a href="{{ url_for('all_series') }}" class="bouton_menu">All Séries</a></div>
+        </nav>
+                    
+        <div class="contenu" style="margin: 45px;">
+            
+            <h1>Bienvenue sur RecoSeries</h1>
+            <h2>Chercher une série en fonction de mots clés</h2>
+            <br/>
+            
+            <!-- Barre de Recherche -->
+            <div class="barreRecherche">
+                <input type="text" id="motSerie" name="motSerie" placeholder="Recherchez une série..." required>
+                <button class="searchBtn" id="searchBtn">Rechercher</button>
+            </div>
+        
+            <h1>Vos résultats</h1>
+            <!-- Résultats de la recherche -->
+            <div class="resultSearch">
+                <ul id="resultList"></ul> <!-- Liste qui affichera les résultats -->
+            </div>
+        </div>
+    </body>
+</html>

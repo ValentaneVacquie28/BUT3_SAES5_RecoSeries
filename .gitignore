@@ -1,0 +1,13 @@
+*.srt
+*.SRT
+*.sub
+*.ass
+*.VO
+*.rar
+*.nfo
+vo.txt
+vf.txt
+*.zip
+*.env
+*.npy
+*.pkl

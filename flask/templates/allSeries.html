@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Toutes les Séries</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+        <script src="https://use.fontawesome.com/fe459689b4.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="recommandation"><a href="{{ url_for('recommandationSeries') }}" class="bouton_menu">Mes recommandations</a></div>
+            <div class="search"><a href="{{ url_for('home') }}" class="bouton_menu">Rechercher une série</a></div>
+        </nav>
+        
+        <div class="contenu" style="margin: 45px;">
+            <h1>Liste de Toutes les Séries</h1>
+            
+            <div class="resultSearch">
+                <ul id="seriesList">
+                    {% for serie in series %}
+                        <li class="resultItem" data-id="{{ serie.Title }}">
+                            <div class="partGauche">
+                                <img src="{{ serie.Poster }}" alt="Poster de {{ serie.Title }}">
+                            </div>
+                            <div class="partDroite">
+                                <strong>{{ serie.Title }}</strong> - {{ serie.Released }}
+                                <div class="genreItem">
+                                    <p>{{ serie.Genre }}</p>
+                                </div>
+                                <p>Intrigue : {{ serie.Plot }}</p>
+                                <p>Acteurs : {{ serie.Actors }}</p>
+                                <p>Scénaristes : {{ serie.Writer }}</p>
+                                <p>Réalisateur : {{ serie.Director }}</p>
+                                <p>Récompenses : {{ serie.Awards }}</p>
+                            </div>
+                            <div class="buttons">
+                                <button class="like-btn {{ 'active' if serie.Title in liked else '' }}" data-id="{{ serie.Title }}" style="background-color: {{ 'green' if serie.Title in liked else '' }}">
+                                    <i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i>
+                                </button>
+                                <button class="dislike-btn {{ 'active' if serie.Title in disliked else '' }}" data-id="{{ serie.Title }}" style="background-color: {{ 'red' if serie.Title in disliked else '' }}">
+                                    <i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i>
+                                </button>
+                            </div> 
+                        </li>
+                    {% else %}
+                        <li>Aucune série trouvée.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <!-- Section Pagination -->
+            <div class="pagination">
+                {% if page > 1 %}
+                    <a href="{{ url_for('all_series', page=page-1) }}" class="prev">Précédent</a>
+                {% endif %}
+                
+                {% for i in range(1, total_pages + 1) %}
+                    <a href="{{ url_for('all_series', page=i) }}" class="page-number {{ 'active' if i == page else '' }}">
+                        {{ i }}
+                    </a>
+                {% endfor %}
+            
+                {% if page < total_pages %}
+                    <a href="{{ url_for('all_series', page=page+1) }}" class="next">Suivant</a>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>

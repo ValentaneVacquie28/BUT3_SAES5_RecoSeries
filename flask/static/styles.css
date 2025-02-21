@@ -1,0 +1,393 @@
+/* Style de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001f3f; /* Bleu foncé pour l'arrière-plan */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour le conteneur de contenu */
+.contenu {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Style boutton recommandation*/
+.recommandation_index {
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #001f3f;
+    color: white;
+}
+
+
+.recommandation_index a:hover{
+    color: black; /* Couleur du texte au survol */
+    background-color: #c1adff; 
+}
+
+.recommandation {
+    position: absolute;
+    top: 80px;
+    right: 375px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #001f3f;
+    color: white;
+}
+
+
+.recommandation a:hover{
+    color: black; /* Couleur du texte au survol */
+    background-color: #c1adff; 
+}
+
+.series{
+    position: absolute;
+    top: 80px;
+    right: 375px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #001f3f;
+    color: white;
+}
+
+.series a:hover{
+    color: black; /* Couleur du texte au survol */
+    background-color: #c1adff; 
+}
+
+.search {
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #001f3f;
+    color: white;
+}
+
+.search a:hover{
+    color: black; /* Couleur du texte au survol */
+    background-color: #c1adff; 
+}
+
+
+.bouton_menu{
+    background-color: #001f3f;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    padding: 20px;
+}
+
+/*Boutons "pouce" pour l'évaluation des series par l'utilisateur*/
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn .fa {
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.btn.green .fa {
+    color: green;
+}
+
+.btn.red .fa {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Style nav */
+.barreRecherche form {
+    display: flex; /* Aligne la barre de recherche et le bouton à l'horizontale */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.barreRecherche input[type="text"] {
+    width: 80%; /* Largeur ajustée */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.searchBtn {
+    background-color: #f1f1f1; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    padding: 10px;
+    font-size: 16px; 
+    cursor: pointer; /* Pointeur en forme de main au survol */
+}
+
+.searchBtn:hover {
+    background-color: #ddd; /* Couleur légèrement plus foncée au survol */
+}
+
+/* Résultats de la recherche */
+.resultSearch {
+    margin-top: 50px;
+}
+
+.resultSearch ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resultSearch ul li {
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*Resulat de la recommandation */
+.resultRecom {
+    margin-top: 50px;
+}
+
+.resultRecom ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resultRecom ul li {
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur pour aligner la partie gauche et droite */
+.resultItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Partie gauche: titre, date et poster */
+.partGauche {
+    width: 30%; /* 30% de l'espace pour la partie gauche */
+}
+
+/* Partie droite: genre, intrigue, acteurs, etc. */
+.partDroite {
+    text-align: left;
+    padding-top: 18px;
+    width: 120%;
+}
+
+.genreItem {
+    text-transform: uppercase; /* Mettre le genre en majuscule */
+    margin-bottom: 10px;
+}
+
+.partDroite p {
+    margin-bottom: 10px;
+}
+
+/* Pour les images de posters */
+img {
+    width: 180px;
+    padding-top: 15px;
+    padding-left: 40px;
+}
+
+
+/*Pagination*/
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; 
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    padding: 5px 10px; 
+    margin: 2px;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination a.prev, .pagination a.next {
+    font-size: 16px;
+}
+
+.pagination a.disabled {
+    color: #ccc;
+    pointer-events: none;
+}
+
+.pagination a:hover, .pagination a.active {
+    cursor: pointer;
+}
+
+
+/*Responsive*/
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px; 
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .series, .search, .recommandation {
+        position: static; /* Annule les positions absolues */
+        margin: 10px 0;
+        width: 90%; 
+    }
+
+    .recommandation{
+        padding-left: 45px;
+    }
+
+    .contenu {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .resultItem {
+        flex-direction: column; /* Affiche les éléments de résultat en colonne */
+        align-items: center;
+    }
+
+    .partGauche {
+        width: 100%; /* L'image prendra toute la largeur */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .partDroite {
+        width: 100%; /* Détails en pleine largeur */
+    }
+
+    img {
+        width: 150px; /* Taille réduite pour les tablettes */
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 12px; 
+        padding: 0;
+        margin: 0;
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .series, .search, .recommandation {
+        position: static;
+        margin: 5px 0;
+        width: 100%; 
+        text-align: center;
+    }
+
+    .bouton_menu {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .contenu {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .resultItem {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partGauche, .partDroite {
+        width: 100%;
+        text-align: center;
+    }
+
+    img {
+        width: 120px; /* Images plus petites sur mobile */
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .barreRecherche form {
+        flex-direction: column; 
+    }
+
+    .barreRecherche input[type="text"] {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+
+    .searchBtn {
+        width: 100%;
+    }
+}
+
