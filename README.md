@@ -1,6 +1,6 @@
-# Recommandation de Séries Basée sur les Sous-Titres - SAE BUT3 S5
+# Recommandation de Séries Basée sur les Sous-Titres - SAE BUT3 S5 - Fait par Cédric Longuet et Valentane Vacquié en 2024.
 
-Ce projet propose un système de recommandation de séries TV basé sur les mots-clés trouvés dans les sous-titres des épisodes. L'objectif est de fournir des suggestions pertinentes en fonction des thèmes ou des sujets détectés dans le dialogue des séries. Fait par Cédric Longuet et Valentane Vacquié en 2024.
+Ce projet propose un système de recommandation de séries TV basé sur les mots-clés trouvés dans les sous-titres des épisodes. L'objectif est de fournir des suggestions pertinentes en fonction des thèmes ou des sujets détectés dans le dialogue des séries. 
 
 ## Fonctionnalités
 
